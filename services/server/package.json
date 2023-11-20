@@ -1,0 +1,32 @@
+{
+  "name": "misis-project-clicker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+
+  "scripts": {
+    "production": "node index.js",
+    "development": "nodemon -L"
+},
+  "dependencies": {
+		"body-parser": "^1.20.2",
+		"cors": "^2.8.5",
+		"dewart-logs": "^1.0.1",
+		"dewart-pg": "^1.0.4",
+		"express": "^4.18.2",
+		"express-rate-limit": "^6.7.0",
+		"helmet": "^6.0.1",
+		"http": "^0.0.1-security",
+		"http-errors": "^2.0.0",
+		"https": "^1.0.0",
+		"path": "^0.12.7",
+		"pg": "^8.9.0",
+		"redis": "^4.6.5"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.21"
+	},
+  "author": "Pobedinskiy David",
+  "license": "ISC"
+}
