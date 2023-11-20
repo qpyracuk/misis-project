@@ -1,7 +1,7 @@
 # MISIS PROJECT
 
 ### Запуск
-sh ```
+```sh 
 docker-compose up
 ```
 
