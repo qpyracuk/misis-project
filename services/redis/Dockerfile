@@ -5,8 +5,8 @@ ARG PASSWORD="password"
 # ИНИЦИАЛИЗАЦИЯ ДИРЕКТОРИИ
 RUN mkdir /data/bases
 # КОПИРОВАНИЕ ФАЙЛА КОНФИГУРАЦИИ
-COPY ./redis.conf /usr/local/etc/redis/redis.conf 
+COPY redis.conf /usr/local/etc/redis/redis.conf 
 # УСТАНОВКА ПРАВ ДОСТУПА К ФАЙЛУ
 RUN chmod 755 /usr/local/etc/redis/redis.conf
 # ЗАПУСК REDIS-SERVER
-CMD [ "redis-server", "/usr/local/etc/redis/redis.conf", "--requirepass", "$PASSWORD"]
+CMD redis-server /usr/local/etc/redis/redis.conf --requirepass "$PASSWORD"

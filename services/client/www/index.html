@@ -1,13 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <main class="">
-    123123123
-  </main>
-</body>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./src/styles/normalize.css" />
+		<link rel="stylesheet" href="./src/styles/index.css" />
+		<title>Clicker</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<main class="main">
+			<div class="clicker">
+				<div class="clicker__header">
+					<div class="clicker__header-image" id="logo">
+						<svg class="clicker__header-image-item clicker__header-image-start" viewBox="0 0 200 200">
+							<path d="M143.28,100A43.28,43.28,0,1,1,79.61,61.83" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="13" />
+						</svg>
+						<svg class="clicker__header-image-item clicker__header-image-middle" viewBox="0 0 200 200">
+							<path d="M71.21,161.27A67.7,67.7,0,1,1,167.7,100" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="13" />
+						</svg>
+						<svg class="clicker__header-image-item clicker__header-image-end" viewBox="0 0 200 200">
+							<path
+								d="M100,193C49,193,7.05,151,7.05,100A93.18,93.18,0,0,1,74.8,10.53"
+								fill="none"
+								stroke-linecap="round"
+								stroke-miterlimit="10"
+								stroke-width="13" />
+						</svg>
+					</div>
+					<h1 class="clicker__header-text">Мисис кликер</h1>
+				</div>
+				<div class="clicker__signature">
+					Сократите вашу ссылку для того, чтобы Ваши клиенты могли быстро вас найти. Благодаря сокращению ссылок, пользователи не будут видеть длинные
+					отталкивающие адреса.
+				</div>
+				<div class="clicker__form">
+					<input id="clicker-input" type="text" placeholder="https://example.com" class="clicker__form-input" />
+					<button  id="clicker-button" class="clicker__form-button">Сократить</button>
+				</div>
+				<div class="clicker__output">
+					<a href="" class="clicker__output-link">
+						<svg class="clicker__output-link-image" width="26px" fill="currentColor" height="26px" viewBox="0 0 24 24" class="shortener__short-link-icon">
+							<path
+								color="currentColor"
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M10.94 8.81851C9.76843 9.99008 9.76843 11.8896 10.94 13.0612C11.3305 13.4517 11.3305 14.0848 10.94 14.4754C10.5495 14.8659 9.91631 14.8659 9.52579 14.4754C7.57317 12.5227 7.57317 9.35692 9.52579 7.4043L13.0613 3.86876C15.0139 1.91614 18.1798 1.91614 20.1324 3.86876C22.085 5.82138 22.085 8.98721 20.1324 10.9398L19.0398 12.0325C18.6492 12.423 18.0161 12.423 17.6255 12.0325C17.235 11.6419 17.235 11.0088 17.6255 10.6183L18.7182 9.52562C19.8898 8.35404 19.8898 6.45455 18.7182 5.28298C17.5466 4.1114 15.6471 4.1114 14.4755 5.28298L10.94 8.81851ZM13.061 15.1813C14.2325 14.0097 14.2325 12.1102 13.061 10.9387C12.6704 10.5481 12.6704 9.91497 13.061 9.52444C13.4515 9.13392 14.0846 9.13392 14.4752 9.52444C16.4278 11.4771 16.4278 14.6429 14.4752 16.5955L10.975 20.0957C9.02237 22.0483 5.85654 22.0483 3.90392 20.0957C1.9513 18.1431 1.9513 14.9772 3.90392 13.0246L4.92922 11.9993C5.31975 11.6088 5.95291 11.6088 6.34344 11.9993C6.73396 12.3898 6.73396 13.023 6.34344 13.4135L5.31813 14.4388C4.14656 15.6104 4.14656 17.5099 5.31813 18.6815C6.48971 19.853 8.3892 19.853 9.56077 18.6815L13.061 15.1813Z"></path>
+						</svg>
+						<span id="short-url" class="clicker__output-link-text">ТЕСТОВАЯ ССЫЛКА</span>
+					</a>
+					<button class="clicker__output-button clicker__output-button-copy">Копировать</button>
+					<button class="clicker__output-button clicker__output-button-qr">Настроить QR-код</button>
+					<button class="clicker__output-button clicker__output-button-share"></button>
+					<div id="qr-code" class="clicker__output-qr" width="1000" height="1000"></div>
+				</div>
+			</div>
+		</main>
+	</body>
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+	<script src="./src/scripts/index.js"></script>
 </html>
