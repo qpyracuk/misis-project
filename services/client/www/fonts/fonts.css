@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Avengeance MA';
+    src:
+        local('Avengeance MA'),
+        url(../fonts/AVENGEANCE_MIGHTIEST_AVENGER_RUS.woff2) format('woff2'), 
+        url(../fonts/AVENGEANCE_MIGHTIEST_AVENGER_RUS.ttf) format('truetype');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src:
+        local('Calibri'),
+        url(../fonts/calibrib.woff2) format('woff2'), 
+        url(../fonts/calibrib.ttf) format('truetype');
+    font-weight: bold;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Segoe Print';
+    src:
+        local('Segoe Print'),
+        url(../fonts/segoeprb.woff2) format('woff2'), 
+        url(../fonts/segoeprb.ttf) format('truetype');
+    font-weight: bold;
+    font-display: swap;
+}

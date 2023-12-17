@@ -1,0 +1,22 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        --gradient-color1: #43124A;
+        --gradient-color2: #00509A;
+        --accent-color: #00509A;
+        --slogan-shadow: #FECF55;
+        --main-color: #6600aa;
+        --text-color: #FFFFFF;
+        --button-color: #00509A;
+    }
+
+    .main__poster-girl {
+        --poster-slogan-shadow: #2edaf1;
+        --poster-slogan: #E31E26;
+        --poster-slogan-bg: #FFFFFF;
+        --poster-slogan-bg-stroke: #F15822;
+        --poster-skin: #5f231b;
+        --poster-folds: #FFFDF8;
+        --poster-t-shirt: #4BB2E5;
+        --poster-hairs: #ED1682;
+    }
+}
