@@ -1,0 +1,180 @@
+:root {
+    --gradient-color1: #FECF55;
+    --gradient-color2: #EEF2C0;
+    --accent-color: #F15822;
+    --slogan-shadow: #FECF55;
+    --main-color: #F7B2C4;
+    --button-border: #fff;
+    --input-placeholder-color: #9b9b9b;
+    --text-color: #000000;
+    --button-color: #DC262F;
+    --poster-slogan-shadow: #F1EA2E;
+    --poster-slogan: #E31E26;
+    --poster-slogan-bg: #FFFFFF;
+    --poster-slogan-bg-stroke: #F15822;
+    --poster-skin: #F69874;
+    --poster-stroke: #000000;
+    --poster-nails: #DB325B;
+    --poster-folds: #FFFDF8;
+    --poster-t-shirt: #FFFFFF;
+    --poster-googles: #FFFFFF;
+    --poster-mouth: #DC262F;
+    --poster-hairs: #F3A95E;
+
+    --body-bg-gradient:
+        repeating-linear-gradient(
+                var(--gradient-color1) 0 15px,
+                var(--gradient-color2) 15px 25px,
+                var(--gradient-color1) 25px 45px,
+                var(--gradient-color2) 45px 50px,
+                var(--gradient-color1) 50px 80px,
+                var(--gradient-color2) 80px 100px,
+                var(--gradient-color1) 100px 110px,
+                var(--gradient-color2) 110px 125px,
+                var(--gradient-color1) 125px 140px,
+                var(--gradient-color2) 140px 150px,
+                var(--gradient-color1) 150px 170px,
+                var(--gradient-color2) 170px 175px,
+                var(--gradient-color1) 175px 205px,
+                var(--gradient-color2) 205px 230px,
+                var(--gradient-color1) 230px 240px,
+                var(--gradient-color2) 240px 255px,
+                var(--gradient-color1) 255px 270px,
+                var(--gradient-color2) 270px 280px,
+                var(--gradient-color1) 280px 300px,
+                var(--gradient-color2) 300px 305px,
+                var(--gradient-color1) 305px 350px,
+                var(--gradient-color2) 350px 355px,
+                var(--gradient-color1) 355px 365px,
+                var(--gradient-color2) 365px 380px
+            );
+    --slogan-font: 'Avengeance MA';
+    --main-font: 'Segoe Print';
+    --label-font: 'Calibri';
+}
+
+.page {
+    width: 100%;
+    max-height: fit-content;
+    background: var(--body-bg-gradient) no-repeat center / cover;
+    font-family: var(--main-font);
+    font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    background-color: var(--main-color);
+}
+
+.main {
+    grid-row: span 2;
+    display: grid;
+    padding-top: 15vh;
+}
+
+.footer {
+    width: 100%;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__label-text {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    font-family: var(--label-font);
+    font-size: 16px;
+    color: #fff;
+    background-color: #000;
+}
+
+.header__label-digits {
+    color: #FECF55;
+}
+
+.main__poster-girl {
+    justify-self: center;
+    max-width: 80vh;
+}
+
+.footer__input {
+    background-color: var(--button-border);
+    border: 7px solid var(--accent-color);
+    border-radius: 30px;
+    width: 500px;
+}
+
+.footer__input:focus-visible {
+    outline: none;
+}
+
+.footer__input:focus {
+    outline: none;
+}
+
+.footer__input::placeholder {
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+.footer__input[type=text] {
+    font-size: 20px;
+}
+
+.footer__button {
+    text-transform: uppercase;
+    color: var(--button-border);
+    background-color: var(--accent-color);
+    border: 7px solid var(--button-border);
+    border-radius: 30px;
+    width: 200px;
+    margin-left: 20px;
+    cursor: pointer;
+    box-shadow: 
+        inset -5px -5px 8px -4px #020d18,
+        inset 3px 3px 8px -4px var(--button-border)
+}
+
+.footer__button:focus-visible {
+    outline: none;
+}
+
+.footer__button:focus {
+    outline: none;
+}
+
+.footer__button:active {
+    background-color: var(--button-color);
+    box-shadow: 
+        inset -3px -3px 8px -4px var(--button-border),
+        inset 3px 3px 5px #020d18;
+}
+
+.footer__discription {
+    max-width: 720px;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+@media (width >= 720px) {
+    .footer__input-conteiner {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+}
+
+@media (width < 720px) {
+    .page {
+        max-width: 720px;
+    }
+
+    .footer__input-conteiner {
+        flex-direction: column;
+    }
+}
